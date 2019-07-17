@@ -1,0 +1,17 @@
+/Users/April/Documents/C#/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/April/Documents/C#/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/xunit.runner.reporters.netcoreapp10.dll
+/Users/April/Documents/C#/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/xunit.runner.utility.netcoreapp10.dll
+/Users/April/Documents/C#/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/GradeBook.Tests.deps.json
+/Users/April/Documents/C#/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/GradeBook.Tests.runtimeconfig.json
+/Users/April/Documents/C#/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/GradeBook.Tests.runtimeconfig.dev.json
+/Users/April/Documents/C#/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/GradeBook.Tests.dll
+/Users/April/Documents/C#/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/GradeBook.Tests.pdb
+/Users/April/Documents/C#/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/GradeBook.dll
+/Users/April/Documents/C#/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/GradeBook.pdb
+/Users/April/Documents/C#/gradebook/test/GradeBook.Tests/obj/Debug/netcoreapp2.2/GradeBook.Tests.csprojAssemblyReference.cache
+/Users/April/Documents/C#/gradebook/test/GradeBook.Tests/obj/Debug/netcoreapp2.2/GradeBook.Tests.csproj.CoreCompileInputs.cache
+/Users/April/Documents/C#/gradebook/test/GradeBook.Tests/obj/Debug/netcoreapp2.2/GradeBook.Tests.AssemblyInfoInputs.cache
+/Users/April/Documents/C#/gradebook/test/GradeBook.Tests/obj/Debug/netcoreapp2.2/GradeBook.Tests.AssemblyInfo.cs
+/Users/April/Documents/C#/gradebook/test/GradeBook.Tests/obj/Debug/netcoreapp2.2/GradeBook.Tests.csproj.CopyComplete
+/Users/April/Documents/C#/gradebook/test/GradeBook.Tests/obj/Debug/netcoreapp2.2/GradeBook.Tests.dll
+/Users/April/Documents/C#/gradebook/test/GradeBook.Tests/obj/Debug/netcoreapp2.2/GradeBook.Tests.pdb
