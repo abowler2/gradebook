@@ -11,7 +11,7 @@ namespace GradeBook.Tests
             string name = "April";
             var upper = MakeUppercase(name);
 
-            Assert.Equal("APRIL", name);
+            Assert.Equal("April", name); 
             Assert.Equal("APRIL", upper);
         }
 
