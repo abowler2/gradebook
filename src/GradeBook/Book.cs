@@ -24,7 +24,7 @@ namespace GradeBook
     public interface IBook
         {
             void AddGrade(double grade);
-            Stats GetStats();
+            Statistics GetStats();
             string Name { get; }
             event GradeAddedDelegate GradeAdded;
         }
@@ -39,12 +39,12 @@ namespace GradeBook
 
         public abstract void AddGrade(double grade);
 
-        public abstract Stats GetStats();
+        public abstract Statistics GetStats();
     }
 
     public class DiskBook : Book
     {
-        public DiskBook(string name) :base(name)
+        public DiskBook(string name) : base(name)
         {
             
         }
@@ -53,19 +53,38 @@ namespace GradeBook
 
         public override void AddGrade(double grade)
         {
-            using(var writer = File.AppendText($"{Name}.txt"))
+            if (grade < 100 && grade > 0)
             {
-                writer.WriteLine(grade);
-                if(GradeAdded != null)
+                using(var writer = File.AppendText($"{Name}.txt"))
                 {
-                    GradeAdded(this, new EventArgs());
+                    writer.WriteLine(grade);
+                    if(GradeAdded != null)
+                    {
+                        GradeAdded(this, new EventArgs());
+                    }
                 }
+            }
+            else
+            {
+                throw new ArgumentException($"Invalid {nameof(grade)}");
             }
         }
 
-        public override Stats GetStats()
+        public override Statistics GetStats()
         {
-            throw new NotImplementedException();
+            var result = new Statistics();
+            using(var reader = File.OpenText($"{Name}.txt"))
+            {
+                var line = reader.ReadLine();
+                while(line != null)
+                {
+                    var number = double.Parse(line);
+                    result.Add(number);
+                    line = reader.ReadLine();
+                }
+            }
+
+            return result;
         }
     }
 
@@ -93,42 +112,16 @@ namespace GradeBook
         }
 
         public override event GradeAddedDelegate GradeAdded;
-        public override Stats GetStats()
+        public override Statistics GetStats()
         {
-            var result = new Stats();
-            result.Average = 0.0;
-            result.High = double.MinValue;
-            result.Low= double.MaxValue;
+            var result = new Statistics();
 
             
-            foreach(var grade in grades)
+            for(var i = 0; i < grades.Count; i++)
             {
-                result.High = Math.Max(grade, result.High);
-                result.Low = Math.Min(grade, result.Low);
-                result.Average += grade;
+                result.Add(grades[i]);
             } 
-                
-            result.Average /= grades.Count;
 
-            switch(result.Average)
-            {
-                case var d when d >= 90.0:
-                    result.Letter = 'A';
-                    break;
-                case var d when d >= 80.0:
-                    result.Letter = 'B';
-                    break;
-                case var d when d >= 70.0:
-                    result.Letter = 'C';
-                    break;
-                case var d when d >= 60.0:
-                    result.Letter = 'D';
-                    break;
-                default:
-                    result.Letter = 'F';
-                    break;
-            }
-            
             return result;
         }
 
